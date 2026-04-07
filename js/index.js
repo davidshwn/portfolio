@@ -2,8 +2,8 @@ function generateExperience(name, description, created_at, html_url) {
     let clonedExperience = document.querySelector(".experience-template").cloneNode(true);
     clonedExperience.children[0].textContent = name;
     clonedExperience.children[1].textContent = created_at.split("-")[0];
-    clonedExperience.children[3].textContent = description;
-    clonedExperience.children[4].href = html_url;
+    clonedExperience.children[2].textContent = description;
+    clonedExperience.children[3].href = html_url;
     clonedExperience.classList.remove("experience-template");
     clonedExperience.classList.add("experience");
     document.querySelector(".experience-container").appendChild(clonedExperience);
